@@ -9,7 +9,7 @@
  </a>
  <a href="https://cocoapods.org/pods/LMStorage">
   <img src="https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=for-the-badge">
- </a>
+ </a><br>
  <a href="https://github.com/thejohnlima/LMStorage">
   <img src="https://img.shields.io/github/repo-size/thejohnlima/LMStorage.svg?style=for-the-badge">
  </a>
