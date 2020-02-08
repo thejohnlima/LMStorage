@@ -23,7 +23,7 @@
 import Foundation
 import KeychainSwift
 
-final class LMSecureStorage<T: LMCodable>: LMAbstractStorage<T> {
+public final class LMSecureStorage<T: LMCodable>: LMAbstractStorage<T> {
 
   // MARK: - Properties
   private let storage: KeychainSwift

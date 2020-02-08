@@ -33,19 +33,19 @@ public class LMAbstractStorage<T: LMCodable> {
   }
 
   // MARK: - Internal Methods
-  func getFirst(key: String? = nil) -> T? {
+  public func getFirst(key: String? = nil) -> T? {
     fatalError("Not implemented exception")
   }
 
-  func create(_ register: T, key: String? = nil) -> Bool {
+  public func create(_ register: T, key: String? = nil) -> Bool {
     fatalError("Not implemented exception")
   }
 
-  func update(_ register: T, key: String? = nil) -> Bool {
+  public func update(_ register: T, key: String? = nil) -> Bool {
     fatalError("Not implemented exception")
   }
 
-  func delete(key: String? = nil) -> Bool {
+  public func delete(key: String? = nil) -> Bool {
     fatalError("Not implemented exception")
   }
 
