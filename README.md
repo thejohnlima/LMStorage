@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/github/v/release/thejohnlima/LMStorage?style=for-the-badge">
  </a>
  <a href="https://github.com/thejohnlima/LMStorage/actions">
-  <img src="https://img.shields.io/github/workflow/status/thejohnlima/LMStorage/CI/master?style=for-the-badge">
+  <img src="https://img.shields.io/github/workflow/status/thejohnlima/LMStorage/CI?style=for-the-badge">
  </a>
  <a href="https://cocoapods.org/pods/LMStorage">
   <img src="https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=for-the-badge">
