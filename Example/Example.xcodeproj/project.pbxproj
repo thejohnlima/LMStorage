@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,6 +50,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0C0921249C7A44004AF719 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B2EFF3F23EEFD1600B5681B /* User.swift */,
+				1B2EFF4223EEFDB100B5681B /* UserStorage.swift */,
+				1B2EFF4823EF002800B5681B /* UserSecureStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B0C0922249C7A8A004AF719 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B2EFF2F23EEFA5800B5681B /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B0C0923249C7A9A004AF719 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B2EFF4623EEFE8700B5681B /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1B2EFF1F23EEFA5700B5681B = {
 			isa = PBXGroup;
 			children = (
@@ -73,15 +99,13 @@
 			children = (
 				1B2EFF2B23EEFA5800B5681B /* AppDelegate.swift */,
 				1B2EFF4423EEFDF900B5681B /* Key.swift */,
-				1B2EFF3F23EEFD1600B5681B /* User.swift */,
-				1B2EFF4223EEFDB100B5681B /* UserStorage.swift */,
-				1B2EFF4823EF002800B5681B /* UserSecureStorage.swift */,
-				1B2EFF4623EEFE8700B5681B /* ViewModel.swift */,
-				1B2EFF2F23EEFA5800B5681B /* ViewController.swift */,
 				1B2EFF3123EEFA5800B5681B /* Main.storyboard */,
 				1B2EFF3623EEFA6200B5681B /* LaunchScreen.storyboard */,
 				1B2EFF3923EEFA6200B5681B /* Info.plist */,
 				1B2EFF3423EEFA6200B5681B /* Assets.xcassets */,
+				1B0C0921249C7A44004AF719 /* Model */,
+				1B0C0922249C7A8A004AF719 /* View */,
+				1B0C0923249C7A9A004AF719 /* ViewModel */,
 			);
 			path = Example;
 			sourceTree = "<group>";

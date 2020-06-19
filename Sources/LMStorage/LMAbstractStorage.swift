@@ -49,6 +49,14 @@ public class LMAbstractStorage<T: LMCodable> {
     fatalError("Not implemented exception")
   }
 
+  public func getRegisters(key: String? = nil) -> [T] {
+    fatalError("Not implemented exception")
+  }
+
+  public func set(registers: [T], key: String? = nil) -> Bool {
+    fatalError("Not implemented exception")
+  }
+
   func store(_ register: T, key: String) -> Bool {
     fatalError("Not implemented exception")
   }

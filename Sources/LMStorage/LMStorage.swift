@@ -64,18 +64,26 @@ public class LMStorage<T: LMCodable>: LMAbstractStorage<T> {
     return true
   }
 
-  override func store(_ register: T, key: String) -> Bool {
-    let encoder = JSONEncoder()
+  public override func getRegisters(key: String? = nil) -> [T] {
+    let storageKey = concatKey(with: key ?? "")
+    guard let data = storage.value(forKey: storageKey) as? Data else { return [] }
+    let result = try? JSONDecoder().decode([T].self, from: data)
+    return result ?? []
+  }
 
-    guard let encoded = try? encoder.encode(register) else {
+  public override func set(registers: [T], key: String? = nil) -> Bool {
+    let storageKey = concatKey(with: key ?? "")
+    guard let data = try? JSONEncoder().encode(registers) else { return false }
+    storage.set(data, forKey: storageKey)
+    return true
+  }
+
+  override func store(_ register: T, key: String) -> Bool {
+    guard let encoded = try? JSONEncoder().encode(register) else {
       storage.set(register, forKey: key)
-      storage.synchronize()
       return true
     }
-
     storage.set(encoded, forKey: key)
-    storage.synchronize()
-
     return true
   }
 }

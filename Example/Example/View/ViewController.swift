@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     viewModel.deleteUser()
     print("\nRemoved:")
     print(viewModel.getUser()?.dictionary() ?? "⚠️ User not found")
-    print("\n-------------------------------------------------")
+    print("\n-----------------------------------------")
 
     // Saving secure user
     viewModel.saveSecureUser()

@@ -26,55 +26,78 @@ import XCTest
 final class LMStorageTests: XCTestCase {
 
   // MARK: - Properties
+  private var storage: UserStorage!
+
   static var allTests = [
     ("testSaveDataSuccess", testSaveDataSuccess),
+    ("testUpdateDataSuccess", testUpdateDataSuccess),
+    ("testGetDataSuccess", testGetDataSuccess)
   ]
+
+  // MARK: - Overrides
+  override func setUp() {
+    super.setUp()
+    storage = UserStorage()
+  }
+
+  override func tearDown() {
+    _ = storage.delete()
+    super.tearDown()
+  }
 
   // MARK: - Tests Storage
   func testSaveDataSuccess() {
-    let user = User(id: "1", name: "John John", age: 30)
-    let storage = UserStorage()
-    var status = storage.create(user)
-
-    XCTAssertTrue(status)
-
-    status = storage.delete()
-
+    let user = User(id: "1", name: "John", age: 30)
+    let status = storage.create(user)
     XCTAssertTrue(status)
   }
 
   func testUpdateDataSuccess() {
-    var user = User(id: "1", name: "John John", age: 30)
-    let storage = UserStorage()
+    var user = User(id: "1", name: "John", age: 30)
     var status = storage.create(user)
 
     XCTAssertTrue(status)
 
-    user = User(id: "2", name: "John John", age: 1130)
+    user = User(id: "2", name: "John", age: 1130)
     status = storage.update(user)
-
-    XCTAssertTrue(status)
-
-    status = storage.delete()
 
     XCTAssertTrue(status)
   }
 
   func testGetDataSuccess() {
-    let user = User(id: "1", name: "John John", age: 30)
-    let storage = UserStorage()
-    var status = storage.create(user)
-
-    XCTAssertTrue(status)
-
+    let user = User(id: "1", name: "John", age: 30)
+    _ = storage.create(user)
     let saved = storage.getFirst()
 
     XCTAssertEqual(saved?.id, "1")
-    XCTAssertEqual(saved?.name, "John John")
+    XCTAssertEqual(saved?.name, "John")
     XCTAssertEqual(saved?.age, 30)
+  }
 
-    status = storage.delete()
+  func testDeleteDataWithSuccess() {
+    let user = User(id: "1", name: "John", age: 30)
+    let status = storage.create(user)
 
     XCTAssertTrue(status)
+
+    let deleted = storage.delete()
+
+    XCTAssertTrue(deleted)
+  }
+
+  func testSaveArrayWithSuccess() {
+    let registers: [User] = [
+      User(id: "J1", name: "Yoda", age: 900),
+      User(id: "J2", name: "Anakin", age: 22)
+    ]
+
+    let status = storage.set(registers: registers)
+
+    XCTAssertTrue(status)
+
+    let users: [User] = storage.getRegisters()
+
+    XCTAssertEqual(users.first?.name, "Yoda")
+    XCTAssertEqual(users.last?.name, "Anakin")
   }
 }
