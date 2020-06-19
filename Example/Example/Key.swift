@@ -10,6 +10,6 @@ import Foundation
 
 /// Storage Keys
 struct Key {
-  static let container = "LMStorage"
+  static let container = "Example"
   static let user = "User"
 }

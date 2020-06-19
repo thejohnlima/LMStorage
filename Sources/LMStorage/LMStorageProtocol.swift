@@ -32,3 +32,13 @@ public protocol LMStorageProtocol {
   func getRegisters() -> [T]
   func set(registers: [T]) -> Bool
 }
+
+extension LMStorageProtocol {
+  public func getRegisters() -> [T] {
+    return []
+  }
+
+  public func set(registers: [T]) -> Bool {
+    return false
+  }
+}

@@ -16,7 +16,7 @@ class ViewModel {
   init () {}
 
   func saveUser() {
-    let user = User(id: "1", name: "John John", age: 30)
+    let user = User(id: "J1", name: "Yoda", age: 900)
     _ = storage.create(user)
   }
 
@@ -30,7 +30,7 @@ class ViewModel {
   }
 
   func saveSecureUser() {
-    let user = User(id: "2", name: "John John", age: 1130)
+    let user = User(id: "J2", name: "Analin", age: 22)
     _ = secureStorage.create(user)
   }
 
