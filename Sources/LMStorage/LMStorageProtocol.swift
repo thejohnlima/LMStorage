@@ -29,4 +29,6 @@ public protocol LMStorageProtocol {
   func create(_ register: T) -> Bool
   func update(_ register: T) -> Bool
   func delete() -> Bool
+  func getRegisters() -> [T]
+  func set(registers: [T]) -> Bool
 }

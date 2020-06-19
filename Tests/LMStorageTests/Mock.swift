@@ -48,19 +48,27 @@ struct UserStorage: LMStorageProtocol {
   }
 
   // MARK: - Public Methods
-  func getFirst() -> User? {
+  func getFirst() -> T? {
     return storage.getFirst()
   }
 
-  func create(_ register: User) -> Bool {
+  func create(_ register: T) -> Bool {
     return storage.create(register)
   }
 
-  func update(_ register: User) -> Bool {
+  func update(_ register: T) -> Bool {
     return storage.update(register)
   }
 
   func delete() -> Bool {
     return storage.delete()
+  }
+
+  func getRegisters() -> [T] {
+    storage.getRegisters()
+  }
+
+  func set(registers: [T]) -> Bool {
+    storage.set(registers: registers)
   }
 }

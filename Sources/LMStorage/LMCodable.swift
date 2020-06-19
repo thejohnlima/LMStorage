@@ -100,5 +100,28 @@ extension LMCodable {
   public func hash(into hasher: inout Hasher) {
     hasher.combine(identifier)
   }
-}
 
+  /// Get object from local JSON file
+  ///
+  /// - Parameter file: JSON file name
+  /// - Returns: Object
+  public static func getItem<T: LMCodable>(from file: String) -> T? {
+    if let path = Bundle.main.path(forResource: file, ofType: "json"),
+      let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+      return try? JSONDecoder().decode(T.self, from: data)
+    }
+    return nil
+  }
+
+  /// Get objects from local JSON file
+  /// - Parameter file: JSON file name
+  /// - Returns: Array of objects
+  public static func getItems<T: LMCodable>(from file: String) -> [T] {
+    if let path = Bundle.main.path(forResource: file, ofType: "json"),
+      let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+      let result = try? JSONDecoder().decode([T].self, from: data)
+      return result ?? []
+    }
+    return []
+  }
+}
