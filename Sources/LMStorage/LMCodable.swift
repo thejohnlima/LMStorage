@@ -29,6 +29,13 @@ import Foundation
 /// ```
 public typealias LMJSON = [String: Any]
 
+/// Alias for literal dictionary
+/// ```
+/// // Example
+/// let user: LMJSON = ["age": nil]
+/// ```
+public typealias LMJSONOptional = [String: Any?]
+
 /// LMCodable protocol
 public protocol LMCodable: Codable, Hashable {
 
