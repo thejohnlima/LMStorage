@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -6,7 +6,7 @@ let package = Package(
   name: "LMStorage",
   platforms: [
     .macOS(.v10_13),
-    .iOS(.v9),
+    .iOS(.v12),
     .watchOS(.v3),
     .tvOS(.v9)
   ],
@@ -17,12 +17,14 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/evgenyneu/keychain-swift.git", from: "19.0.0")
+    .package(name: "KeychainSwift", url: "https://github.com/evgenyneu/keychain-swift.git", from: "19.0.0")
   ],
   targets: [
     .target(
       name: "LMStorage",
-      dependencies: ["KeychainSwift"]
+      dependencies: [
+        "KeychainSwift"
+      ]
     ),
     .testTarget(
       name: "LMStorageTests",

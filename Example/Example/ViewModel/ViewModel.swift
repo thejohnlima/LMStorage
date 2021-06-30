@@ -30,7 +30,7 @@ class ViewModel {
   }
 
   func saveSecureUser() {
-    let user = User(id: "J2", name: "Analin", age: 22)
+    let user = User(id: "J2", name: "Anakin", age: 22)
     _ = secureStorage.create(user)
   }
 
