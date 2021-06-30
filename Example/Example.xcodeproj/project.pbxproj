@@ -17,7 +17,7 @@
 		1B2EFF4523EEFDF900B5681B /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2EFF4423EEFDF900B5681B /* Key.swift */; };
 		1B2EFF4723EEFE8700B5681B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2EFF4623EEFE8700B5681B /* ViewModel.swift */; };
 		1B2EFF4923EF002800B5681B /* UserSecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2EFF4823EF002800B5681B /* UserSecureStorage.swift */; };
-		1B5D9374268C16A2008E0945 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1B5D9373268C16A2008E0945 /* SwiftPackageProductDependency */; };
+		1B5D9374268C16A2008E0945 /* LMStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B5D9373268C16A2008E0945 /* LMStorage */; };
 		1C781F5D9BB5046E8AEAE73B /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EDFF1C160A8EE85705B8E4 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C781F5D9BB5046E8AEAE73B /* Pods_Example.framework in Frameworks */,
-				1B5D9374268C16A2008E0945 /* BuildFile in Frameworks */,
+				1B5D9374268C16A2008E0945 /* LMStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +147,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				1B5D9373268C16A2008E0945 /* SwiftPackageProductDependency */,
+				1B5D9373268C16A2008E0945 /* LMStorage */,
 			);
 			productName = Example;
 			productReference = 1B2EFF2823EEFA5800B5681B /* Example.app */;
@@ -178,7 +178,7 @@
 			);
 			mainGroup = 1B2EFF1F23EEFA5700B5681B;
 			packageReferences = (
-				1B5D9372268C16A2008E0945 /* RemoteSwiftPackageReference */,
+				1B5D9372268C16A2008E0945 /* XCRemoteSwiftPackageReference "LMStorage" */,
 			);
 			productRefGroup = 1B2EFF2923EEFA5800B5681B /* Products */;
 			projectDirPath = "";
@@ -440,20 +440,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1B5D9372268C16A2008E0945 /* RemoteSwiftPackageReference */ = {
+		1B5D9372268C16A2008E0945 /* XCRemoteSwiftPackageReference "LMStorage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thejohnlima/LMStorage.git";
 			requirement = {
-				branch = feature/update_spm;
+				branch = master;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1B5D9373268C16A2008E0945 /* SwiftPackageProductDependency */ = {
+		1B5D9373268C16A2008E0945 /* LMStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B5D9372268C16A2008E0945 /* RemoteSwiftPackageReference */;
+			package = 1B5D9372268C16A2008E0945 /* XCRemoteSwiftPackageReference "LMStorage" */;
 			productName = LMStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
