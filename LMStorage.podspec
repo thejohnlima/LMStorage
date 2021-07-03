@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name               = "LMStorage"
-  s.version            = "1.0.2"
+  s.version            = "1.0.3"
   s.summary            = "💾 LMStorage is a framework which reduces the complexity of managing a persistent layer."
   s.requires_arc       = true
   s.homepage           = "https://github.com/thejohnlima/LMStorage"
