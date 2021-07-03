@@ -6,6 +6,12 @@
 //  Copyright © 2021 thejohnlima. All rights reserved.
 //
 
-import Foundation
+import LMStorage
 
-
+struct Defaults: LMDefaults {
+  enum Keys: String {
+    case currentUser
+    case accessToken
+    case haveSeenOnboarding
+  }
+}
