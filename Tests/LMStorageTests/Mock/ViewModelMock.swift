@@ -30,7 +30,7 @@ class ViewModelMock {
   }
 
   func getUser() -> User? {
-    let data = """
+    let json = """
     {
       "id": "123",
       "name": "John",
@@ -38,8 +38,8 @@ class ViewModelMock {
     }
     """.data(using: .utf8)
 
-    guard let data = data else { return nil }
+    guard let result = json else { return nil }
 
-    return User(data)
+    return User(result)
   }
 }
