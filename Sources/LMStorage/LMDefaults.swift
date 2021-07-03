@@ -102,6 +102,13 @@ extension LMDefaults {
     value(forKey: key.rawValue)
   }
 
+  /// Returns the bool for the property identified by a given key.
+  /// - Parameter key: The key with which to associate the value.
+  /// - Returns: The bool value for the property identified by key.
+  public static func bool(forKey key: Keys) -> Bool {
+    value(forKey: key.rawValue) as? Bool ?? false
+  }
+
   /// Returns the array associated with the specified key.
   /// - Parameter key: A key in the current user‘s defaults database.
   /// - Returns: The array associated with the specified key, or nil if the key does not exist or its value is not an array.

@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
     let savedUser: User? = Defaults.object(forKey: .currentUser)
     let token = Defaults.value(forKey: .accessToken) as? String
-    let haveSeenOnboarding = Defaults.value(forKey: .haveSeenOnboarding) as? Bool ?? false
+    let haveSeenOnboarding = Defaults.bool(forKey: .haveSeenOnboarding)
 
     print("\nDefaults - Saved User: \(savedUser?.dictionary() ?? [:])")
     print("Defaults - Saved Token: \(token ?? "")")

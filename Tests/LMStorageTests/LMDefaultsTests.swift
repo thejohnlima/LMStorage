@@ -63,9 +63,9 @@ final class LMDefaultsTests: XCTestCase {
 
     DefaultsMock.set(haveSeenOnboarding, forKey: .haveSeenOnboarding)
 
-    let value = DefaultsMock.value(forKey: .haveSeenOnboarding) as? Bool ?? false
+    let result = DefaultsMock.bool(forKey: .haveSeenOnboarding)
 
-    XCTAssertTrue(value)
+    XCTAssertTrue(result)
   }
 
   func testSaveStringWithSuccess() {
