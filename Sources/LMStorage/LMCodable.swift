@@ -68,6 +68,7 @@ extension LMCodable {
       let object = try JSONDecoder().decode(Self.self, from: data)
       self = object
     } catch {
+      print("❌ Decode json error: \(error.localizedDescription)")
       return nil
     }
   }
@@ -78,6 +79,7 @@ extension LMCodable {
       let object = try decoder.decode(Self.self, from: data)
       self = object
     } catch {
+      print("❌ Decode data error: \(error.localizedDescription)")
       return nil
     }
   }
@@ -130,5 +132,12 @@ extension LMCodable {
       return result ?? []
     }
     return []
+  }
+}
+
+extension Encodable {
+  func encodeJSON() throws -> Data {
+    let encoder = JSONEncoder()
+    return try encoder.encode(self)
   }
 }

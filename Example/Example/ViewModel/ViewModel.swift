@@ -13,6 +13,10 @@ class ViewModel {
   let storage = UserStorage()
   let secureStorage = UserSecureStorage()
 
+  var userMock: User {
+    User(id: "123", name: "John", age: nil)
+  }
+
   init () {}
 
   func saveUser() {
