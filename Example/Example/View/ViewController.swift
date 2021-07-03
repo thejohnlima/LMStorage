@@ -34,13 +34,13 @@ class ViewController: UIViewController {
   }
 
   private func testDefaults() {
-    Defaults.set(object: viewModel.userMock, key: .currentUser)
-    Defaults.set("321abcd", forKey: .accessToken)
-    Defaults.set(true, forKey: .haveSeenOnboarding)
+    MyDefaults.set(object: viewModel.userMock, key: .currentUser)
+    MyDefaults.set("321abcd", forKey: .accessToken)
+    MyDefaults.set(true, forKey: .haveSeenOnboarding)
 
-    let savedUser: User? = Defaults.object(forKey: .currentUser)
-    let token = Defaults.value(forKey: .accessToken) as? String
-    let haveSeenOnboarding = Defaults.bool(forKey: .haveSeenOnboarding)
+    let savedUser: User? = MyDefaults.object(forKey: .currentUser)
+    let token = MyDefaults.value(forKey: .accessToken) as? String
+    let haveSeenOnboarding = MyDefaults.bool(forKey: .haveSeenOnboarding)
 
     print("\nDefaults - Saved User: \(savedUser?.dictionary() ?? [:])")
     print("Defaults - Saved Token: \(token ?? "")")

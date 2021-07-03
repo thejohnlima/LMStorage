@@ -58,7 +58,46 @@ pod 'LMStorage'
 
 and run `pod install`
 
-## 🎓 How to use
+## 🎓 How to use LMDefaults
+
+Import library in your file:
+
+```Swift
+import LMStorage
+```
+
+Create a struct for your Defaults files:
+
+```Swift
+struct MyDefaults: LMDefaults {
+  enum Keys: String {
+    case currentUser
+    case accessToken
+    case haveSeenOnboarding
+  }
+}
+```
+
+Than, in the view controller just save what you need:
+
+```Swift
+class ViewController: UIViewController {
+
+  let viewModel = ViewModel()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MyDefaults.set(true, forKey: .haveSeenOnboarding)
+
+    let haveSeenOnboarding = MyDefaults.bool(forKey: .haveSeenOnboarding)
+
+    print("Have Seen Onboarding: \(haveSeenOnboarding)")
+  }
+}
+```
+
+## 🎓 How to use LMStorage
 
 Import library in your file:
 

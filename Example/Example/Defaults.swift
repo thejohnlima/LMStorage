@@ -8,7 +8,7 @@
 
 import LMStorage
 
-struct Defaults: LMDefaults {
+struct MyDefaults: LMDefaults {
   enum Keys: String {
     case currentUser
     case accessToken
