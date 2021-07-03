@@ -32,6 +32,7 @@ public protocol LMDefaults {
   static func objects<T: LMCodable>(forKey key: Keys) -> [T]
   static func object<T: LMCodable>(forKey key: Keys) -> T?
   static func value(forKey key: Keys) -> Any?
+  static func bool(forKey key: Keys) -> Bool
   static func array(forKey key: Keys) -> [Any]?
   static func removeObject(forKey key: Keys)
   static func reset(for keys: [Keys])
