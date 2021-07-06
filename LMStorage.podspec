@@ -7,8 +7,9 @@ Pod::Spec.new do |s|
   s.license = "MIT"
   s.author = { "John Lima" => "thejohnlima@icloud.com" }
   s.social_media_url = "https://twitter.com/thejohnlima"
-  s.platform = :ios, "12.1"
+  s.ios.deployment_target = "12.1"
   s.tvos.deployment_target = "9.0"
+  s.watchos.deployment_target = "4.0"
   s.source = { :git => "https://github.com/thejohnlima/LMStorage.git", :tag => "#{s.version}" }
   s.source_files = "Sources/LMStorage/**/*.{swift}"
   s.swift_version = "5.0"
