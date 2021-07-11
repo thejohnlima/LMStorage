@@ -28,7 +28,10 @@ let package = Package(
     ),
     .testTarget(
       name: "LMStorageTests",
-      dependencies: ["LMStorage"]
+      dependencies: ["LMStorage"],
+      resources: [
+        .process("Resources")
+      ]
     )
   ]
 )
