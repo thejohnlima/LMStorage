@@ -140,8 +140,22 @@ extension LMCodable {
 }
 
 extension Encodable {
-  func encodeJSON() throws -> Data {
+  public func encodeJSON() throws -> Data {
     let encoder = JSONEncoder()
     return try encoder.encode(self)
   }
+}
+
+extension Data {
+    /// Parse array of items
+    /// - Returns: Array of Objects
+    public func toItems<T: LMCodable>() -> [T] {
+        do {
+            let result = try JSONDecoder().decode([T].self, from: self)
+            return result
+        } catch {
+            print("❌ Decode data error: \(error.localizedDescription)")
+            return []
+        }
+    }
 }
