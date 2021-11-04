@@ -66,11 +66,9 @@ and run `pod install`
 ```json
 {
   "title": "Iron Man",
-  "description": null,
   "category": "action",
   "year": 2008,
   "rate": "94%",
-  "link": null,
   "image": "https://i.pinimg.com/564x/9d/e9/1e/9de91e58cfde7f05eb79e203301980ef.jpg"
 }
 ```
@@ -107,20 +105,16 @@ let movie: Movie? = Movie.getItem(from: "file_name")
 [
   {
     "title": "Iron Man",
-    "description": null,
     "category": "action",
     "year": 2008,
     "rate": "94%",
-    "link": null,
     "image": "https://i.pinimg.com/564x/9d/e9/1e/9de91e58cfde7f05eb79e203301980ef.jpg"
   },
   {
     "title": "Black Panther",
-    "description": null,
     "category": "action",
     "year": 2018,
     "rate": "96%",
-    "link": null,
     "image": "https://i.pinimg.com/564x/43/cd/5b/43cd5b065b271006da5491645e0564c3.jpg"
   }
 ]
