@@ -59,6 +59,100 @@ pod 'LMStorage'
 
 and run `pod install`
 
+## 🎓 How to use LMCodable
+
+### Parsing a dictionary
+
+```json
+{
+  "title": "Iron Man",
+  "description": null,
+  "category": "action",
+  "year": 2008,
+  "rate": "94%",
+  "link": null,
+  "image": "https://i.pinimg.com/564x/9d/e9/1e/9de91e58cfde7f05eb79e203301980ef.jpg"
+}
+```
+
+```swift
+import LMStorage
+
+struct Movie: LMCodable {
+  let title: String?
+  let description: String?
+  let category: String?
+  let year: Int?
+  let rate: String?
+  let link: String?
+  let image: String?
+}
+```
+
+Parsing the JSON movie using a `Data` type returned by the request
+
+```swift
+let movie = Movie(data)
+```
+
+Parsing a local JSON file
+
+```swift
+let movie: Movie? = Movie.getItem(from: "file_name")
+```
+
+### Parsing an array
+
+```json
+[
+  {
+    "title": "Iron Man",
+    "description": null,
+    "category": "action",
+    "year": 2008,
+    "rate": "94%",
+    "link": null,
+    "image": "https://i.pinimg.com/564x/9d/e9/1e/9de91e58cfde7f05eb79e203301980ef.jpg"
+  },
+  {
+    "title": "Black Panther",
+    "description": null,
+    "category": "action",
+    "year": 2018,
+    "rate": "96%",
+    "link": null,
+    "image": "https://i.pinimg.com/564x/43/cd/5b/43cd5b065b271006da5491645e0564c3.jpg"
+  }
+]
+```
+
+```swift
+import LMStorage
+
+struct Movie: LMCodable {
+  let title: String?
+  let description: String?
+  let category: String?
+  let year: Int?
+  let rate: String?
+  let link: String?
+  let image: String?
+}
+```
+
+Parsing the JSON movie using a `Data` type returned by the request
+
+```swift
+let data: Data = ...
+let movies: [Movie] = data.toItems()
+```
+
+Parsing a local JSON file
+
+```swift
+let movies: [Movie] = Movie.getItems(from: "movies_file_name")
+```
+
 ## 🎓 How to use LMDefaults
 
 Import library in your file:
@@ -84,8 +178,6 @@ Than, in the view controller just save what you need:
 ```Swift
 class ViewController: UIViewController {
 
-  let viewModel = ViewModel()
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -108,14 +200,14 @@ import LMStorage
 
 ```swift
 /// Saving user example
-let user = User(id: "1", name: "John John", age: 30)
+let user = User(id: "1", name: "John", age: 30)
 let storage = UserStorage()
 storage.create(user)
 ```
 
 ```swift
 /// Saving secure user example
-let user = User(id: "2", name: "John John", age: 1130)
+let user = User(id: "2", name: "Test", age: 1130)
 let secureStorage = UserSecureStorage()
 secureStorage.create(user)
 ```
