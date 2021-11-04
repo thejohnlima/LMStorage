@@ -31,7 +31,9 @@ final class LMCodableTests: XCTestCase {
   private var signs: [Sign] = []
 
   static var allTests = [
-    ("testSuccessItemLocalParse", testSuccessItemLocalParse)
+    ("testSuccessItemLocalParse", testSuccessItemLocalParse),
+    ("testSuccessItemsLocalParse", testSuccessItemsLocalParse),
+    ("testParseArrayWithSuccess", testParseArrayWithSuccess)
   ]
 
   // MARK: - Overrides
@@ -45,6 +47,15 @@ final class LMCodableTests: XCTestCase {
     sign = nil
     signs = []
     super.tearDown()
+  }
+
+  // MARK: - Private Methods
+  private var moviesData: Data? {
+    if let path = Bundle.module.path(forResource: "movies", ofType: "json"),
+       let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+      return data
+    }
+    return nil
   }
 
   // MARK: - Test Methods
@@ -68,5 +79,12 @@ final class LMCodableTests: XCTestCase {
     XCTAssertEqual(signs.last?.color, "Teal")
     XCTAssertEqual(signs.last?.luckyNumber, "42")
     XCTAssertEqual(signs.last?.luckyTime, "4pm")
+  }
+
+  func testParseArrayWithSuccess() {
+    let movies: [Movie] = moviesData!.toItems()
+    XCTAssertEqual(movies.count, 2)
+    XCTAssertEqual(movies.first?.title, "Black Panther")
+    XCTAssertEqual(movies.last?.title, "Iron Man")
   }
 }

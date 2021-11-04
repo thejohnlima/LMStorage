@@ -44,7 +44,7 @@ final class LMDefaultsTests: XCTestCase {
     super.tearDown()
   }
 
-  // MARK: - Tests Storage
+  // MARK: - Tests
   func testSaveObjectDataWithSuccess() {
     let user = viewModel!.getUser()!
 
