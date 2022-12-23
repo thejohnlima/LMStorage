@@ -1,6 +1,6 @@
 os: macos
 language: swift
-osx_image: xcode14.2
+osx_image: xcode14.1
 install:
   - bundle install
 script:
