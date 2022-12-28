@@ -1,0 +1,7 @@
+os: macos
+language: swift
+osx_image: xcode14.1
+install:
+  - bundle install
+script:
+  - bundle exec fastlane build
