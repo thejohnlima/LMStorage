@@ -4,17 +4,11 @@
  <a href="https://github.com/thejohnlima/LMStorage/releases">
   <img src="https://img.shields.io/github/v/release/thejohnlima/LMStorage?style=for-the-badge">
  </a>
- <a href="https://github.com/thejohnlima/LMStorage/actions">
-  <img src="https://img.shields.io/github/workflow/status/thejohnlima/LMStorage/CI?style=for-the-badge">
- </a>
  <a href="https://cocoapods.org/pods/LMStorage">
   <img src="https://img.shields.io/badge/Cocoa%20Pods-✓-4BC51D.svg?style=for-the-badge">
  </a><br>
  <a href="https://github.com/thejohnlima/LMStorage">
   <img src="https://img.shields.io/github/repo-size/thejohnlima/LMStorage.svg?style=for-the-badge">
- </a>
- <a href="https://raw.githubusercontent.com/thejohnlima/LMStorage/master/LICENSE">
-  <img src="https://img.shields.io/github/license/thejohnlima/LMStorage.svg?style=for-the-badge">
  </a>
  <a href="https://developer.apple.com/ios/">
   <img src="https://img.shields.io/cocoapods/p/LMStorage?style=for-the-badge">
@@ -22,8 +16,8 @@
  <a href="https://developer.apple.com/swift/">
   <img src="https://img.shields.io/badge/Swift-5-blue.svg?style=for-the-badge">
  </a>
- <a href="https://paypal.me/johncls">
-  <img src="https://img.shields.io/badge/Donate-PayPal-blue.svg?style=for-the-badge">
+ <a href="https://raw.githubusercontent.com/thejohnlima/LMStorage/master/LICENSE">
+  <img src="https://img.shields.io/github/license/thejohnlima/LMStorage.svg?style=for-the-badge">
  </a>
 </p>
 
@@ -290,3 +284,7 @@ If you need more examples, take a look at [`Example project`](https://github.com
 ## 📜 License
 
 **LMStorage** is under MIT license. See the [LICENSE](https://raw.githubusercontent.com/thejohnlima/LMStorage/master/LICENSE?token=ALdmBr7BYPLFm0JcKkmChbVeGU10EblTks5cgHzcwA%3D%3D) file for more info.
+
+## ☕️ Support
+
+<a href="https://www.buymeacoffee.com/thejohnlima" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
