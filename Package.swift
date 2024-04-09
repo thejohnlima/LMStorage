@@ -23,7 +23,7 @@ let package = Package(
         .product(name: "KeychainSwift", package: "keychain-swift")
       ],
       resources: [
-        .copy("Sources/LMStorage/PrivacyInfo.xcprivacy")
+        .copy("PrivacyInfo.xcprivacy")
       ]
     ),
     .testTarget(
