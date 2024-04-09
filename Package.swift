@@ -21,6 +21,9 @@ let package = Package(
       name: "LMStorage",
       dependencies: [
         .product(name: "KeychainSwift", package: "keychain-swift")
+      ],
+      resources: [
+        .copy("Sources/LMStorage/PrivacyInfo.xcprivacy")
       ]
     ),
     .testTarget(
