@@ -14,7 +14,7 @@ platform :ios do
       configuration: "debug",
       enable_code_coverage: true,
       xcpretty_output: "simple",
-      build_path: "./build"
+      scratch_path: "./build"
     )
   end
 

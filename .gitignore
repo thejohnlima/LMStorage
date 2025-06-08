@@ -28,7 +28,6 @@ DerivedData/
 .vscode
 vendor
 coverage
-Gemfile.lock
 
 ## Obj-C/Swift specific
 *.hmap
