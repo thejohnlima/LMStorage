@@ -1,7 +1,0 @@
-os: macos
-language: swift
-osx_image: xcode16.4
-install:
-  - bundle install
-script:
-  - bundle exec fastlane build
