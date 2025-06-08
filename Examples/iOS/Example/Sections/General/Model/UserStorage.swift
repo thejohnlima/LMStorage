@@ -18,26 +18,26 @@ struct UserStorage: LMStorageProtocol {
   }
 
   func getFirst() -> T? {
-    return storage.getFirst()
+    storage.getFirst()
   }
 
   func create(_ register: T) -> Bool {
-    return storage.create(register)
+    storage.create(register)
   }
 
   func update(_ register: T) -> Bool {
-    return storage.update(register)
+    storage.update(register)
   }
 
   func getRegisters() -> [T] {
-    return storage.getRegisters()
+    storage.getRegisters()
   }
 
   func set(registers: [T]) -> Bool {
-    return storage.set(registers: registers)
+    storage.set(registers: registers)
   }
 
   func delete() -> Bool {
-    return storage.delete()
+    storage.delete()
   }
 }

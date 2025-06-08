@@ -1,5 +1,5 @@
 PODS:
-  - KeychainSwift (20.0.0)
+  - KeychainSwift (24.0.0)
   - LMStorage (1.0.8):
     - KeychainSwift
 
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  KeychainSwift: 0ce6a4d13f7228054d1a71bb1b500448fb2ab837
-  LMStorage: 5fe77fd7a27a7d56f10b32e2191b91aadaecc67c
+  KeychainSwift: 007c4647486e4563adca839cf02cef00deb3b670
+  LMStorage: db20ad651c89cff5f0cda9ed29a8c3c7235fa829
 
 PODFILE CHECKSUM: 208c4e2d0bc43c26e11d7fc08d1151f5fc532b17
 

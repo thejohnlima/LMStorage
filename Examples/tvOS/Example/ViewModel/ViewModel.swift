@@ -17,16 +17,13 @@ class ViewModel {
     User(id: "123", name: "John", age: nil)
   }
 
-  init () {}
-
   func saveUser() {
     let user = User(id: "J1", name: "Yoda", age: 900)
     _ = storage.create(user)
   }
 
   func getUser() -> User? {
-    let user = storage.getFirst()
-    return user
+    storage.getFirst()
   }
 
   func deleteUser() {
@@ -43,7 +40,6 @@ class ViewModel {
   }
 
   func getSecureUser() -> User? {
-    let user = secureStorage.getFirst()
-    return user
+    secureStorage.getFirst()
   }
 }
