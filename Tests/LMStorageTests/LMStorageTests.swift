@@ -28,7 +28,7 @@ final class LMStorageTests: XCTestCase {
   // MARK: - Properties
   private var storage: UserStorage!
 
-  static var allTests = [
+    static let allTests = [
     ("testSaveDataSuccess", testSaveDataSuccess),
     ("testUpdateDataSuccess", testUpdateDataSuccess),
     ("testGetDataSuccess", testGetDataSuccess)

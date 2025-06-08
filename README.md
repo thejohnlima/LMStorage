@@ -25,8 +25,8 @@
 
 ## ❗️Requirements
 
-- iOS 12.1+
-- tvOS 9.0+
+- iOS 15.0+
+- tvOS 15.0+
 - Swift 5.0+
 
 ## ⚒ Installation

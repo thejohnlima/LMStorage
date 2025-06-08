@@ -28,7 +28,7 @@ final class LMDefaultsTests: XCTestCase {
   // MARK: - Properties
   private var viewModel: ViewModelMock?
 
-  static var allTests = [
+    static let allTests = [
     ("testSaveObjectDataWithSuccess", testSaveObjectDataWithSuccess)
   ]
 

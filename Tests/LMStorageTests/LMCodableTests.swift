@@ -30,7 +30,7 @@ final class LMCodableTests: XCTestCase {
   private var sign: Sign?
   private var signs: [Sign] = []
 
-  static var allTests = [
+    static let allTests = [
     ("testSuccessItemLocalParse", testSuccessItemLocalParse),
     ("testSuccessItemsLocalParse", testSuccessItemsLocalParse),
     ("testParseArrayWithSuccess", testParseArrayWithSuccess)
