@@ -21,12 +21,12 @@
  </a>
 </p>
 
-💾 **LMStorage** is a framework which reduces the complexity of managing a persistent layer.
+💾 **LMStorage** is a lightweight Swift framework that simplifies persistent storage and leverages the power of Codable for seamless data serialization and deserialization. It reduces boilerplate and streamlines the management of your app’s data layer.
 
 ## ❗️Requirements
 
-- iOS 12.1+
-- tvOS 9.0+
+- iOS 15.0+
+- tvOS 15.0+
 - Swift 5.0+
 
 ## ⚒ Installation

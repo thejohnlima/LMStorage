@@ -13,21 +13,19 @@ struct UserSecureStorage: LMStorageProtocol {
 
   private let storage = LMSecureStorage<T>(with: MyDefaults.Keys.container.rawValue)
 
-  init() {}
-
   func getFirst() -> User? {
-    return storage.getFirst(key: MyDefaults.Keys.user.rawValue)
+    storage.getFirst(key: MyDefaults.Keys.user.rawValue)
   }
 
   func create(_ register: User) -> Bool {
-    return storage.create(register, key: MyDefaults.Keys.user.rawValue)
+    storage.create(register, key: MyDefaults.Keys.user.rawValue)
   }
 
   func update(_ register: User) -> Bool {
-    return storage.update(register, key: MyDefaults.Keys.user.rawValue)
+    storage.update(register, key: MyDefaults.Keys.user.rawValue)
   }
 
   func delete() -> Bool {
-    return storage.delete(key: MyDefaults.Keys.user.rawValue)
+    storage.delete(key: MyDefaults.Keys.user.rawValue)
   }
 }

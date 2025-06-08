@@ -11,33 +11,33 @@ import LMStorage
 struct UserStorage: LMStorageProtocol {
   typealias T = User
 
-  private let storage: LMAbstractStorage<T>
+  private let abstractStorage: LMAbstractStorage<T>
 
   init() {
-    storage = LMStorage(with: Key.user)
+    abstractStorage = LMStorage(with: Key.user)
   }
 
   func getFirst() -> T? {
-    return storage.getFirst()
+    abstractStorage.getFirst()
   }
 
   func create(_ register: T) -> Bool {
-    return storage.create(register)
+    abstractStorage.create(register)
   }
 
   func update(_ register: T) -> Bool {
-    return storage.update(register)
+    abstractStorage.update(register)
   }
 
   func getRegisters() -> [T] {
-    return storage.getRegisters()
+    abstractStorage.getRegisters()
   }
 
   func set(registers: [T]) -> Bool {
-    return storage.set(registers: registers)
+    abstractStorage.set(registers: registers)
   }
 
   func delete() -> Bool {
-    return storage.delete()
+    abstractStorage.delete()
   }
 }
