@@ -137,6 +137,15 @@ extension LMCodable {
     }
     return []
   }
+
+  /// Returns an optional `LMJSONOptional` if the serialization is successful; otherwise, returns `nil`.
+  public func dictionaryNullable() -> LMJSONOptional? {
+    if let jsonData = data(),
+        let result = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? LMJSONOptional {
+            return result
+        }
+    return nil
+    }
 }
 
 extension Encodable {
