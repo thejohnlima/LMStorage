@@ -87,4 +87,19 @@ final class LMCodableTests: XCTestCase {
     XCTAssertEqual(movies.first?.title, "Black Panther")
     XCTAssertEqual(movies.last?.title, "Iron Man")
   }
+
+  func testParseNullable() {
+      let contet = ContentId(id: "Movie-ID", seriesTmdb: nil, source: "Amazon Prime")
+      let dict = contet.dictionaryNullable()
+      let dictionaryItens = 3
+      let keys: [String] = ["id", "seriesTmdb", "source"]
+
+      var itemsCount = 0
+      dict?.forEach { key, _ in
+          itemsCount += 1
+          XCTAssertTrue(keys.contains { $0 == key })
+      }
+
+      XCTAssertEqual(dictionaryItens, itemsCount)
+  }
 }
