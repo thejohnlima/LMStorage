@@ -8,6 +8,8 @@
 import LMStorage
 
 struct MyDefaults: LMDefaults {
+  static var suiteName: String? = "com.myApp.example"
+
   enum Keys: String {
     case container = "Example"
     case user = "User"
