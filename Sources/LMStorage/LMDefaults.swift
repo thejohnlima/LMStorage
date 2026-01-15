@@ -25,6 +25,8 @@ import Foundation
 public protocol LMDefaults {
   associatedtype Keys: RawRepresentable where Keys.RawValue == String
 
+  static var suiteName: String? { get set }
+
   static func set(_ value: Any?, forKey: Keys)
   static func set(array: [Any], key: Keys)
   static func set<T: LMCodable>(array: [T], key: Keys)
@@ -40,6 +42,7 @@ public protocol LMDefaults {
 }
 
 extension LMDefaults {
+
   // MARK: - Public Methods
   /// Sets the value of the specified default key.
   /// - Parameters:
@@ -114,20 +117,18 @@ extension LMDefaults {
   /// - Parameter key: A key in the current user‘s defaults database.
   /// - Returns: The array associated with the specified key, or nil if the key does not exist or its value is not an array.
   public static func array(forKey key: Keys) -> [Any]? {
-    UserDefaults.standard.array(forKey: key.rawValue)
+    defaults.array(forKey: key.rawValue)
   }
 
   /// Remove saved object using the constants key
   /// - Parameter key: The key with which to associate the value.
   public static func removeObject(forKey key: Keys) {
-    UserDefaults.standard.removeObject(forKey: key.rawValue)
+    defaults.removeObject(forKey: key.rawValue)
   }
 
   /// Reset defaults for some keys
   /// - Parameter keys: Keys to reset values
   public static func reset(for keys: [Keys]) {
-    let defaults = UserDefaults.standard
-
     keys.forEach { key in
       defaults.removeObject(forKey: key.rawValue)
     }
@@ -135,7 +136,6 @@ extension LMDefaults {
 
   /// Reset defaults
   public static func reset() {
-    let defaults = UserDefaults.standard
     let dictionary = defaults.dictionaryRepresentation()
 
     dictionary.keys.forEach { key in
@@ -144,11 +144,18 @@ extension LMDefaults {
   }
 
   // MARK: - Private Methods
+  private static var defaults: UserDefaults {
+    if let suiteName {
+      return UserDefaults(suiteName: suiteName) ?? UserDefaults.standard
+    }
+    return UserDefaults.standard
+  }
+
   private static func value(forKey key: String) -> Any? {
-    UserDefaults.standard.value(forKey: key)
+    defaults.value(forKey: key)
   }
 
   private static func set(data: Any?, forKey: String) {
-    UserDefaults.standard.set(data, forKey: forKey)
+    defaults.set(data, forKey: forKey)
   }
 }

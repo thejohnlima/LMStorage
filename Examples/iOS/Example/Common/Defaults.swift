@@ -9,9 +9,12 @@
 import LMStorage
 
 struct MyDefaults: LMDefaults {
+  static var suiteName: String? = "com.myApp.example"
+
   enum Keys: String {
     case currentUser
     case accessToken
     case haveSeenOnboarding
+    case selectedMovie
   }
 }

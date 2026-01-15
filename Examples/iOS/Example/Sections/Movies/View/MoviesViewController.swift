@@ -18,6 +18,9 @@ class MoviesViewController: UIViewController {
   // MARK: - View LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    print("Selected Movie: \(MyDefaults.value(forKey: .selectedMovie) as? String ?? "nil")")
+
     viewModel.fetchMovies()
   }
 }
@@ -48,5 +51,9 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+
+    let item = viewModel.movies[indexPath.row]
+
+    MyDefaults.set(item.title, forKey: .selectedMovie)
   }
 }

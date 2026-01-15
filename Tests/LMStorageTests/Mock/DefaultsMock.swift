@@ -23,6 +23,8 @@
 @testable import LMStorage
 
 struct DefaultsMock: LMDefaults {
+  static var suiteName: String?
+
   enum Keys: String {
     case currentUser
     case accessToken
